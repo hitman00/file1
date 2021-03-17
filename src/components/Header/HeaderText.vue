@@ -3,23 +3,26 @@
     <h1>زیبایی طبیعی</h1>
     <p>ارایه دهنده بهترین خدمات جوانسازی پوست، بوتاکس،ژل لب</p>
     <div :class="$style.bottonss">
-      <Box1>
-        <div :class="$style.textbox">تماس و مشاوره رایگان</div>
+      <Box1
+        ><a href="tel:09021804129">
+          <div :class="$style.textbox">تماس و مشاوره رایگان</div>
 
-        <div :class="$style.imagebox">
-          <div :class="$style.imagedef">
-            <img src="@/assets/imgs/2.png" />
-          </div>
-        </div>
+          <div :class="$style.imagebox">
+            <div :class="$style.imagedef">
+              <img src="@/assets/imgs/2.png" />
+            </div></div
+        ></a>
       </Box1>
-      <Box1 :class="$style.boxbackground">
-        <div :class="$style.textbox">اینستاگرام ما</div>
 
-        <div :class="$style.imagebox">
-          <div :class="$style.imagedef">
-            <img src="@/assets/imgs/3.png" />
-          </div>
-        </div>
+      <Box1 :class="$style.boxbackground"
+        ><a href="https://www.instagram.com/">
+          <div :class="$style.textbox">اینستاگرام ما</div>
+
+          <div :class="$style.imagebox">
+            <div :class="$style.imagedef">
+              <img src="@/assets/imgs/3.png" />
+            </div></div
+        ></a>
       </Box1>
     </div>
   </div>
@@ -54,6 +57,9 @@
     }
     .bottonss {
       text-align: center;
+      a {
+        display: flex;
+      }
       .boxbackground {
         background: #5c457b;
       }

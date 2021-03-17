@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.imagebox">
+  <div :class="$style.imagebox" id="scroll_t">
     <Protocol />
     <Natural />
     <div :class="$style.makeup">
@@ -18,7 +18,7 @@
   import Material from './Material.vue';
   import Doctor from './Doctor.vue';
   export default {
-    name: 'Mainlll',
+    name: 'CardsMain',
     components: {
       Protocol,
       Natural,

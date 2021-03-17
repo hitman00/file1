@@ -26,7 +26,7 @@
   import Video from './PlayVideo.vue';
   import ImageDash from './ImageDash.vue';
   export default {
-    name: 'Mainll',
+    name: 'VideoMain',
     data: () => ({
       change: true,
       r: Number,
@@ -40,9 +40,7 @@
       }
     },
     mounted() {
-      this.r =
-        document.getElementsByClassName(this.$style.box)[0].offsetTop +
-        document.getElementsByClassName(this.$style.box)[0].offsetHeight;
+      this.r = document.getElementById('scroll_t').offsetTop;
     },
     components: {
       Video,

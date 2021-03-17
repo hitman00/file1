@@ -83,7 +83,7 @@
     margin: 0 auto;
     float: right;
     .box {
-      max-width: 465.7px;
+      max-width: 620px;
       margin: 0 auto;
     }
   }

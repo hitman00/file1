@@ -2,12 +2,7 @@
   <div :class="$style.happy_box">
     <div :class="$style.box">
       <Slider animation="fade" :class="$style.height_slider">
-        <Slider-item
-          v-for="(i, index) in list"
-          :key="index"
-          :style="i"
-          @click="hello"
-        >
+        <Slider-item v-for="(i, index) in list" :key="index" :style="i">
           <!--  <p style="line-height: 280px; font-size: 5rem; text-align: center;">
             Page{{ index + 1 }}
           </p> -->
@@ -36,11 +31,6 @@
         ],
         sliderValue: 2
       };
-    },
-    methods: {
-      hello() {
-        console.log('here');
-      }
     }
   };
 </script>

@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'Service',
+    name: 'ListOfService',
     props: {
       services: {
         type: String,

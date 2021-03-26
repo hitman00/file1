@@ -4,10 +4,10 @@
       <HeaderMain />
       <VideoMain />
       <Notes />
-      <Part4 />
+      <GelMain />
       <Instagram />
       <Sanaz />
-      <Part5 />
+      <AboutMain />
       <Off />
       <Service />
       <LogeInsta />
@@ -23,10 +23,10 @@
   import HeaderMain from './components/Header/Main.vue';
   import VideoMain from './components/Video/VideoMain.vue';
   import Notes from './components/Cards/NotesMain.vue';
-  import Part4 from './components/Gel/GelMain.vue';
+  import GelMain from './components/Gel/GelMain.vue';
   import Instagram from './components/Instagram/Instagram.vue';
   import Sanaz from './components/Sanaz/SanazMain.vue';
-  import Part5 from './components/Abouts/AboutMainl.vue';
+  import AboutMain from './components/Abouts/AboutMainl.vue';
   import Off from './components/Off/OffMain.vue';
   import Service from './components/Service/ServiceMain.vue';
   import LogeInsta from './components/LogeInsta/MainInstagam.vue';
@@ -41,10 +41,10 @@
       HeaderMain,
       VideoMain,
       Notes,
-      Part4,
+      GelMain,
       Instagram,
       Sanaz,
-      Part5,
+      AboutMain,
       Off,
       Service,
       LogeInsta,

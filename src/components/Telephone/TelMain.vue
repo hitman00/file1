@@ -19,7 +19,7 @@
 
 <script>
   export default {
-    name: 'Tel',
+    name: 'TelMain',
     data() {
       return {
         top: false

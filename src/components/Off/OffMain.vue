@@ -26,7 +26,7 @@
 <script>
   import Special from './SpecialImage.vue';
   export default {
-    name: 'off',
+    name: 'OffMain',
     data: () => ({
       brands: [
         require('@/assets/imgs/masport.png'),

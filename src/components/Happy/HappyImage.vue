@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'Images'
+    name: 'HappyImages'
   };
 </script>
 

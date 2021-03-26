@@ -26,7 +26,7 @@
 <script>
   import ListOfService from './ListOfService.vue';
   export default {
-    name: 'Service',
+    name: 'ServiceMain',
     data: () => ({
       listservice: [
         {

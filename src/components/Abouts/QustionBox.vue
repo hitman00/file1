@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.QustionAnsware">
     <div :class="[$style.qustion, openxx]" @click="test">
-      <Plus><img src="@/assets/imgs/plus.png" alt=""/></Plus>
+      <div :class="$style.plus">
+        <img src="@/assets/imgs/plus.png" />
+      </div>
       {{ question }}
     </div>
     <transition :name="$style.fade">
@@ -12,9 +14,8 @@
   </div>
 </template>
 <script>
-  import Plus from './PlusImage';
   export default {
-    name: 'qustion',
+    name: 'QustionBox',
     props: {
       question: {
         type: String,
@@ -24,9 +25,6 @@
         type: String,
         default: ''
       }
-    },
-    components: {
-      Plus
     },
     data() {
       return {
@@ -69,7 +67,7 @@
 
     .qustion {
       cursor: pointer;
-      padding: 10px;
+      padding: 9px;
       border-radius: 50px;
       background: #fff;
       font-size: 13.5px;
@@ -79,10 +77,20 @@
       line-height: 1.5;
       transition: all 0.5s;
       width: 100%;
+      margin-bottom: 2px;
 
       &.show {
         border-radius: 20px 20px 0 0;
         border-bottom: 1px solid #bc96ff;
+      }
+    }
+    .plus {
+      width: 15px;
+      float: right;
+      margin: 3px 1px 4px 11px;
+      img {
+        width: 100%;
+        display: block;
       }
     }
     .answare {

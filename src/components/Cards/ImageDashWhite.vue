@@ -1,8 +1,6 @@
 <template>
-  <div :class="$style.image">
-    <div :class="$style.imagedef">
-      <slot></slot>
-    </div>
+  <div :class="$style.image_dash">
+    <slot></slot>
   </div>
 </template>
 
@@ -13,7 +11,7 @@
 </script>
 
 <style lang="scss" module>
-  .image {
+  .image_dash {
     position: relative;
     margin: -1px 150.3px;
     &::before {
@@ -21,16 +19,15 @@
       display: block;
       padding-bottom: 12%;
     }
-    .imagedef {
+
+    img {
+      width: 100%;
       overflow: hidden;
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      img {
-        width: 100%;
-      }
     }
   }
 </style>

@@ -10,14 +10,14 @@
           v-for="(item, id) in listservice"
           :key="id"
           :services="item.name"
-        ></ListOfService>
+        />
       </div>
       <div :class="$style.listbox2">
         <ListOfService
           v-for="(iteams, id) in listservice2"
           :key="id"
           :services="iteams.lname"
-        ></ListOfService>
+        />
       </div>
     </div>
   </div>

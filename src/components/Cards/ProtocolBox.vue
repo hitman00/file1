@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.protocol">
-    <CoronaImage>
+    <div :class="$style.image">
       <img src="@/assets/imgs/corona.png" />
-    </CoronaImage>
+    </div>
     <MiddleImage>
       <img src="@/assets/imgs/protocol.png" />
     </MiddleImage>
@@ -20,7 +20,6 @@
 
 <script>
   import ImageDashWhite from './ImageDashWhite';
-  import CoronaImage from './CronaImage';
   import MiddleImage from './MiddelImage.vue';
   import Titel from './Title.vue';
   import Paragraph from './Paragraph.vue';
@@ -29,7 +28,7 @@
     name: 'Protocol',
     components: {
       ImageDashWhite,
-      CoronaImage,
+
       MiddleImage,
       Titel,
       Paragraph
@@ -45,5 +44,14 @@
     border: 5px solid #d8c171;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  .image {
+    position: relative;
+    width: 90px;
+    margin: -12px 0px 0 37px;
+    float: left;
+    img {
+      width: 100%;
+    }
   }
 </style>

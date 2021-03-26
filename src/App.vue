@@ -1,9 +1,9 @@
 <template>
   <div :class="$style.main">
     <div :class="$style.box">
-      <Part1 />
-      <Part2 />
-      <Part3 />
+      <HeaderMain />
+      <VideoMain />
+      <Notes />
       <Part4 />
       <Instagram />
       <Sanaz />
@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import Part1 from './components/Header/HeaderMain.vue';
-  import Part2 from './components/Video/VideoMain.vue';
-  import Part3 from './components/Cards/CardsMain.vue';
+  import HeaderMain from './components/Header/Main.vue';
+  import VideoMain from './components/Video/VideoMain.vue';
+  import Notes from './components/Cards/NotesMain.vue';
   import Part4 from './components/Gel/GelMain.vue';
   import Instagram from './components/Instagram/Instagram.vue';
   import Sanaz from './components/Sanaz/SanazMain.vue';
@@ -36,12 +36,11 @@
   import Tel from './components/Telephone/TelMain.vue';
   export default {
     name: 'App',
-    data: () => ({}),
 
     components: {
-      Part1,
-      Part2,
-      Part3,
+      HeaderMain,
+      VideoMain,
+      Notes,
       Part4,
       Instagram,
       Sanaz,
@@ -75,7 +74,7 @@
     text-decoration: none;
   }
   body {
-    font-family: Iransans;
+    font-family: Iransans, tahoma;
   }
 
   .main {
@@ -83,7 +82,8 @@
     margin: 0 auto;
     float: right;
     .box {
-      max-width: 620px;
+      max-width: 465.7px;
+      //max-width: 620px;
       margin: 0 auto;
     }
   }

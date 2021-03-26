@@ -2,12 +2,7 @@
   <div :class="$style.special">
     <div :class="$style.box">
       <Slider animation="fade" :class="$style.special_height">
-        <Slider-item
-          v-for="(i, index) in list"
-          :key="index"
-          :style="i"
-          @click="hello"
-        >
+        <Slider-item v-for="(i, index) in list" :key="index" :style="i">
           <img :src="i" alt="" />
         </Slider-item>
       </Slider>
@@ -34,11 +29,6 @@
         ],
         sliderValue: 2
       };
-    },
-    methods: {
-      hello() {
-        console.log('here');
-      }
     }
   };
 </script>
@@ -63,44 +53,3 @@
     }
   }
 </style>
-
-<!--<template>
-  <div :class="$style.image">
-    <div :class="$style.imagedef">
-      <img src="@/assets/imgs/special.jpg" />
-    </div>
-  </div>
-</template>
-
-<script>
-  export default {
-    name: 'Images'
-  };
-</script>
-
-<style lang="scss" module>
-  .image {
-    position: relative;
-
-    margin: 14px 12.8px;
-    &::before {
-      content: '';
-      display: block;
-      padding-bottom: 94.6%;
-    }
-    .imagedef {
-      overflow: hidden;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      border-radius: 5px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-</style>
--->

@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.main">
     <div :class="$style.box">
-      <DrImages>
-        <img src="@/assets/imgs/drImage.jpg" alt="" />
-      </DrImages>
-      <div :class="$style.namedoctor">
+      <div :class="$style.dr_image">
+        <img :class="$style.def_image" src="@/assets/imgs/drImage.jpg" />
+      </div>
+      <div :class="$style.name_doctor">
         <h1>دکتر فرشته زمانی</h1>
         <p>متخصص زیبایی و پوست</p>
       </div>
@@ -18,15 +18,17 @@
         بسیار زیبا و متناسب با صورت و زیبایی طبیعی خودتان خواهید داشت.
       </div>
       <div :class="$style.flexfix">
-        <ImageCertificate v-for="(item, id) in certificates" :key="id"
-          ><img :src="item"
-        /></ImageCertificate>
+        <div
+          :class="$style.certificate_image"
+          v-for="(item, id) in certificates"
+          :key="id"
+        >
+          <img :class="$style.def_image" :src="item" />
+        </div>
       </div>
       <div :class="$style.title">جواب تمام سوال های شما پیش ماست</div>
-      <div :class="$style.fiximage">
-        <ImageDash :class="$style.fix"
-          ><img src="@/assets/imgs/4.png"
-        /></ImageDash>
+      <div :class="$style.dash_image">
+        <img src="@/assets/imgs/4.png" />
       </div>
       <div :class="$style.listofqustion">
         <Qustion
@@ -41,16 +43,10 @@
 </template>
 
 <script>
-  import ImageCertificate from './CertificatImage.vue';
-  import DrImages from './DrImages.vue';
-  import ImageDash from '../Video/ImageDash.vue';
   import Qustion from './QustionBox.vue';
   export default {
-    name: 'Mainlllll',
+    name: 'AboutMain',
     components: {
-      DrImages,
-      ImageCertificate,
-      ImageDash,
       Qustion
     },
     data: () => ({
@@ -134,57 +130,83 @@
 <style lang="scss" module>
   .main {
     width: 100%;
-
     .box {
       margin: 0px 8px;
       float: right;
       background: #f9ebea;
-      padding-bottom: 57px;
-      .namedoctor {
-        float: left;
-        margin: -135px 0px 0 53px;
-        position: relative;
-        h1 {
-          color: #4f246e;
-          font-size: 19px;
-          font-weight: 600;
-          word-spacing: -2px;
-        }
-        p {
-          color: #040000;
-          font-size: 13px;
-          word-spacing: -1px;
-        }
+      padding-bottom: 47px;
+    }
+    .name_doctor {
+      float: left;
+      margin: -135px 0px 0 53px;
+      position: relative;
+      h1 {
+        color: #4f246e;
+        font-size: 19px;
+        font-weight: 600;
+        word-spacing: -2px;
       }
-      .text {
-        font-size: 13px;
-        line-height: 1.8;
+      p {
         color: #040000;
-        margin-bottom: 20px;
-        margin-top: 10px;
-        text-align: justify;
-        padding: 7px 27px 0 27px;
+        font-size: 13px;
+        word-spacing: -1px;
       }
-      .certificat {
+    }
+    .text {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #040000;
+      margin-bottom: 19px;
+      margin-top: 10px;
+      text-align: justify;
+      padding: 7px 27px 0 27px;
+    }
+    .dr_image {
+      position: relative;
+      margin: 0px 18px 0 51px;
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: 60%;
       }
-      .title {
-        font-weight: bold;
+    }
+    .def_image {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .certificate_image {
+      position: relative;
+      width: 45.9%;
+      margin: 0 auto 8px auto;
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: 72.5%;
+      }
+    }
+    .title {
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      float: left;
+      margin: 19px auto 0 auto;
+    }
+    .dash_image {
+      float: left;
+      margin: 8px 30.9% 7px;
+      img {
         width: 100%;
-        text-align: center;
-        float: left;
-        margin: 19px auto 0 auto;
+        display: block;
       }
-      .fiximage {
-        float: left;
-        width: 100%;
-        .fix {
-          margin: 6px 121px;
-        }
-      }
-      .flexfix {
-        display: flex;
-        flex-flow: row wrap;
-      }
+    }
+    .flexfix {
+      display: flex;
+      flex-flow: row wrap;
     }
   }
 </style>

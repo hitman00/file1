@@ -5,9 +5,9 @@
         <Slider-item v-for="(i, index) in list" :key="index" :style="i">
           <div :class="$style.box2">
             <div :class="$style.avatarbox">
-              <ImageAvatar>
+              <div :class="$style.avatar">
                 <img :src="i.linki" />
-              </ImageAvatar>
+              </div>
             </div>
           </div>
           <div :class="$style.name">{{ i.fname }}</div>
@@ -19,14 +19,12 @@
 </template>
 
 <script>
-  import ImageAvatar from './AvatarImage';
   import {Slider, SliderItem} from 'vue-easy-slider';
   export default {
     name: 'SanazMain',
     components: {
       SliderItem,
-      Slider,
-      ImageAvatar
+      Slider
     },
     data() {
       return {
@@ -80,7 +78,6 @@
     width: 100%;
     .iteams {
       height: 330px;
-
       margin: 0px 8px;
       background: url('./../../assets/imgs/background-sanaz.jpg');
       background-size: cover;
@@ -114,6 +111,20 @@
       background-size: contain;
       background-repeat: no-repeat;
       margin: 35px auto 0 auto;
+      padding-top: 3px;
+    }
+  }
+  .avatar {
+    width: 82px;
+    height: 82px;
+    position: relative;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50px;
     }
   }
 </style>

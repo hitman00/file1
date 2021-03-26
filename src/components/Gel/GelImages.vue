@@ -2,12 +2,7 @@
   <div :class="$style.gel">
     <div :class="$style.box">
       <Slider animation="fade" :class="$style.special_height">
-        <Slider-item
-          v-for="(i, index) in list"
-          :key="index"
-          :style="i"
-          @click="hello"
-        >
+        <Slider-item v-for="(i, index) in list" :key="index" :style="i">
           <img :src="i" alt="" />
         </Slider-item>
       </Slider>
@@ -34,11 +29,6 @@
         ],
         sliderValue: 2
       };
-    },
-    methods: {
-      hello() {
-        console.log('here');
-      }
     }
   };
 </script>
@@ -49,7 +39,7 @@
 
     .box {
       position: relative;
-      margin: 0 37px 96px;
+      margin: 0 37px 79px;
       z-index: 1;
       img {
         width: 100%;
@@ -61,44 +51,3 @@
     }
   }
 </style>
-
-<!--
-<template>
-  <div :class="$style.image">
-    <div :class="$style.imagedef">
-      <img src="@/assets/imgs/face.jpg" />
-    </div>
-  </div>
-</template>
-
-<script>
-  export default {
-    name: 'Images'
-  };
-</script>
-
-<style lang="scss" module>
-  .image {
-    position: relative;
-
-    margin: 0px 37.5px;
-    &::before {
-      content: '';
-      display: block;
-      padding-bottom: 57.2%;
-    }
-    .imagedef {
-      overflow: hidden;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-</style>
--->

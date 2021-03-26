@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.h_iframe_aparat_embed_frame">
+  <div class="h_iframe_aparat_embed_frame">
     <span></span>
     <iframe
       src="https://www.aparat.com/video/video/embed/videohash/PnWir/vt/frame"
@@ -14,30 +14,32 @@
 
 <script>
   export default {
-    name: 'Video'
+    name: 'PlayVideo'
   };
 </script>
 
 <style lang="scss" module>
-  .h_iframe_aparat_embed_frame {
-    position: relative;
-    width: 100%;
-    height: 302px;
-  }
-  .h_iframe_aparat_embed_frame .ratio {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .h_iframe_aparat_embed_frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    span {
+  :global {
+    .h_iframe_aparat_embed_frame {
+      position: relative;
+      width: 100%;
+      height: 302px;
+    }
+    .h_iframe_aparat_embed_frame .ratio {
       display: block;
-      padding-top: 57%;
+      width: 100%;
+      height: auto;
+    }
+    .h_iframe_aparat_embed_frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      span {
+        display: block;
+        padding-top: 57%;
+      }
     }
   }
 </style>

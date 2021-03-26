@@ -1,8 +1,6 @@
 <template>
   <div :class="$style.protocolImage">
-    <div :class="$style.imagedef">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -22,17 +20,14 @@
       display: block;
       padding-bottom: 100%;
     }
-    .imagedef {
+    img {
       overflow: hidden;
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      img {
-        width: 100%;
-        height: 100%;
-      }
+      width: 100%;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.special">
     <div :class="$style.box">
-      <Slider animation="fade" :class="$style.special_height">
+      <Slider animation="fade">
         <Slider-item v-for="(i, index) in list" :key="index" :style="i">
           <img :src="i" alt="" />
         </Slider-item>
@@ -40,15 +40,29 @@
 
     .box {
       position: relative;
-      margin: 4px 12.8px 47px 12.8px;
+      margin: 5px 2.86% 47px;
       z-index: 1;
+      :global {
+        .slider {
+          height: auto !important;
+          border-radius: 5px;
+          padding-bottom: 94.6%;
+          .slider-btn-right,
+          .slider-btn-left {
+            background: none;
+          }
+        }
+      }
       img {
         width: 100%;
         height: 100%;
       }
-      .special_height {
-        height: 401px !important;
-        border-radius: 5px;
+      :global {
+        .slider {
+          .slider-icon {
+            border-color: #000;
+          }
+        }
       }
     }
   }

@@ -7,7 +7,9 @@
       <div :class="$style.textbox">
         <h1>در اینستاگرام همراه ما باشید</h1>
         <p>برای آشنایی بیشتر با خدمات و نظرات مشتریان</p>
-        <div :class="$style.botton">بزن بریم</div>
+        <div :class="$style.botton">
+          <a href="http://www.instagram.com">بزن بریم</a>
+        </div>
       </div>
     </div>
   </div>
@@ -67,7 +69,6 @@
   }
   .botton {
     border-radius: 50px;
-    color: #fff;
     text-align: center;
     font-size: 18px;
     background: linear-gradient(
@@ -80,6 +81,13 @@
     font-weight: 700;
     padding: 1.5px 5.5px 9.5px 5.5px;
     box-shadow: 1px 1px 3px #7b7b7b;
-    letter-spacing: 1px;
+    transition: all 0.3s;
+    a {
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
   }
 </style>

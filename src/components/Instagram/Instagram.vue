@@ -1,10 +1,10 @@
 <template>
-  <div :class="$style.box">
+  <a href="http://www.instagram.com" :class="$style.box">
     <div :class="$style.insta_logo">
       <img src="@/assets/imgs/3.png" />
     </div>
     <p>برای دیدن کلیه خدمات در اینستاگرام همراه ما باشید</p>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -28,6 +28,11 @@
     display: flex;
     text-align: right;
     border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
     p {
       color: #fff;
       font-size: 15px;

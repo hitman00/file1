@@ -134,7 +134,7 @@
       margin: 0px 8px;
       float: right;
       background: #f9ebea;
-      padding-bottom: 47px;
+      padding-bottom: 46px;
     }
     .name_doctor {
       float: left;

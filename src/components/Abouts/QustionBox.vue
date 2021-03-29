@@ -7,8 +7,10 @@
       {{ question }}
     </div>
     <transition :name="$style.fade">
-      <div :class="$style.answare" v-if="show">
-        {{ answer }}
+      <div v-if="show">
+        <div :class="$style.answare">
+          {{ answer }}
+        </div>
       </div>
     </transition>
   </div>
@@ -75,7 +77,7 @@
       font-weight: bold;
       box-shadow: 0px 0px 4px rgba(187, 180, 180, 0.3);
       line-height: 1.5;
-      transition: all 0.5s;
+      transition: all 0.5s ease;
       width: 100%;
       margin-bottom: 2px;
 

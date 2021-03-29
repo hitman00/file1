@@ -65,8 +65,7 @@
     h1 {
       text-align: center;
       font-weight: bold;
-      margin: 47px 0 0 0;
-      margin-top: 47px;
+      margin: 47px 0 24px 0;
       font-size: 16px;
     }
   }
@@ -75,7 +74,6 @@
     display: flex;
     flex-flow: row wrap;
     background: #f9ebea;
-    padding-bottom: 22px;
   }
 
   .off_image {
@@ -90,7 +88,7 @@
   .brands_image {
     position: relative;
     width: 40.6%;
-    margin: 24px 35px -6px -18px;
+    margin: 0 auto 17px;
     &:before {
       content: '';
       display: block;

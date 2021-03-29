@@ -68,14 +68,14 @@
   .botton {
     background: #bc96ff;
     border-radius: 5px;
-    margin: 0 169px;
+    margin: 0 36.4% 39px;
     font-size: 15px;
     color: #fff;
     padding: 5px;
     text-align: center;
-    margin-bottom: 39px;
     cursor: pointer;
     line-height: 24px;
+    transition: all 0.5s;
     &:hover {
       opacity: 0.8;
     }

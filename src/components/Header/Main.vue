@@ -70,9 +70,10 @@
   .boxbackground {
     background: #5c457b;
     border-radius: 41px;
-    margin: 10px 46px;
+    margin: 10px 10%;
     padding: 9px;
     display: block;
+    transition: all 0.5s;
     &.light {
       background: #472971;
     }
@@ -85,11 +86,5 @@
       vertical-align: middle;
       margin-right: 9px;
     }
-  }
-  .textbox {
-    color: #fff;
-    font-size: 20px;
-    margin-top: 3px;
-    display: inline-block;
   }
 </style>

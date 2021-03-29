@@ -1,11 +1,8 @@
 <template>
   <div :class="$style.happy_box">
     <div :class="$style.box">
-      <Slider animation="fade" :class="$style.height_slider">
+      <Slider animation="fade">
         <Slider-item v-for="(i, index) in list" :key="index" :style="i">
-          <!--  <p style="line-height: 280px; font-size: 5rem; text-align: center;">
-            Page{{ index + 1 }}
-          </p> -->
           <img :src="i" alt="" />
         </Slider-item>
       </Slider>
@@ -44,12 +41,15 @@
       position: relative;
       margin: 0 8px;
       z-index: 1;
+      :global {
+        .slider {
+          height: auto !important;
+          padding-bottom: 71.2%;
+        }
+      }
       img {
         width: 100%;
         height: 100%;
-      }
-      .height_slider {
-        height: 320px !important;
       }
     }
   }

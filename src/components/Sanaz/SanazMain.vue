@@ -82,6 +82,16 @@
       background: url('./../../assets/imgs/background-sanaz.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+      :global {
+        .slider {
+          .slider-icon {
+            border-color: #fff;
+            width: 18px;
+            height: 18px;
+            margin-top: 18px;
+          }
+        }
+      }
     }
     .name {
       font-size: 16px;
